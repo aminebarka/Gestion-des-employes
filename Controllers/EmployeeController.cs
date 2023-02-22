@@ -96,4 +96,8 @@ namespace Gestion_des_employes.Controllers
             }
         }
     }
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> d07df669ee4d484fea11fd75741dc34c32e5b921
