@@ -1,8 +1,10 @@
+using Gestion_des_employes.Models;
+using Gestion_des_employes.Models.Repositories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddSingleton<IRepository<Employee>, EmployeeRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -15,7 +17,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthorization();
